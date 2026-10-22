@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+////////////////////////////////////////////////////////////////////////////////////
+//
+// Function Name : CheckMultipleDivisibility
+// Description   : Checks divisibility of a number by 3 and 5
+// Input         : Integer
+// Output        : String (Divisible by Both / 3 Only / 5 Only / Neither)
+// Author        : Rushikesh Mahesh Suryawanshi
+// Date          : 22/10/2026
+//
+////////////////////////////////////////////////////////////////////////////////////
+
+void CheckMultipleDivisibility(int iValue)
+{
+    if (((iValue % 3) == 0) && ((iValue % 5) == 0))
+    {
+        printf("Divisible by Both\n");
+    }
+    else if ((iValue % 3) == 0)
+    {
+        printf("Divisible by 3 Only\n");
+    }
+    else if ((iValue % 5) == 0)
+    {
+        printf("Divisible by 5 Only\n");
+    }
+    else
+    {
+        printf("Not Divisible by Either\n");
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point Of The Application
+//
+////////////////////////////////////////////////////////////////////////////////////
+
+int main(void)
+{
+    int iValue = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &iValue);
+
+    CheckMultipleDivisibility(iValue);
+
+    return EXIT_SUCCESS;
+}
