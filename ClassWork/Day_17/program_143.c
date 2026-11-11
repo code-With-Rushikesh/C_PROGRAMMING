@@ -1,0 +1,47 @@
+/*
+    iRow = 4
+    iCol = 4
+
+    $  *  *  *
+    B  B  B  B
+    C  C  C  C
+    D  D  D  D
+
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0, j = 0;
+    if(iRow != iCol)
+    {
+        printf("Invalid input \n");
+    }
+
+    for(i = 1; i <= iRow; i++, ch++)
+    {
+
+        for(j = 1,ch = 'A'; j <= iCol; j++)
+        {
+            printf("%c\t",ch);
+        }
+        printf("\n\n");
+    }
+}
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter number of rows : \n");
+    scanf("%d",&iValue1);
+
+    printf("Enter number of colums : \n");
+    scanf("%d",&iValue2);
+
+    Pattern(iValue1,iValue2);
+
+    return EXIT_SUCCESS;
+}
